@@ -1,32 +1,14 @@
 module.exports = {
-  name: "Supermaya",
+  name: "Gooder Windows",
   shortDesc:
-    "An 11ty starter kit designed to help you add rich features to a site without a complicated build process.",
+    "The site for Gooder Windows",
   url: "",
-  authorEmail: "mike@madebymike.com.au",
-  authorHandle: "@MikeRiethmuller",
-  authorName: "Mike",
+  authorEmail: "",
+  authorHandle: "",
+  authorName: "",
   postsPerPage: 4,
-  socialImage: "/img/social.jpg",
-  // theme: {
-  //   primary: {
-  //     background: "white",
-  //     text: "black",
-  //     highlight: "#666",
-  //   },
-  //   secondary: {
-  //     background: "black",
-  //     text: "white",
-  //     highlight: "#666",
-  //   },
-  // },
+  socialImage: "",
 
-  // keystone: {
-  //   comments: true,
-  //   bookmarks: true,
-  //   claps: true,
-  //   login: true,
-  // },
   // Critical CSS results in much slower build times and uses a lot of system resources
   // turn on in production :)
   // See `site/transforms/critical-css-transform.js` for more details

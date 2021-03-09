@@ -68,6 +68,9 @@ module.exports = function(config) {
       input: "site",
       output: "dist"
     },
+    markdownTemplateEngine: 'njk',
+    dataTemplateEngine: 'njk',
+    htmlTemplateEngine: 'njk',
     passthroughFileCopy: true
   };
 };
