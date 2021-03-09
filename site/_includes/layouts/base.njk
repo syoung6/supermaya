@@ -12,7 +12,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml"/>
     
-    {% if site.theme %}
+    {# {% if site.theme %}
     <style>
       :root {
         {% if site.theme.secondary.background %}
@@ -38,7 +38,7 @@
         {% endif %}
       }
     </style>
-    {% endif %}
+    {% endif %} #}
 
     <link rel="stylesheet" href="/css/main.css">
 
@@ -48,7 +48,7 @@
       {% endfor %}
     {% endif %}
 
-    {% include "partials/services/keystone-login-styles.njk" %}
+    {# {% include "partials/services/keystone-login-styles.njk" %} #}
 
     {% include "partials/global/meta-info.njk" %}
     {% block head %}{% endblock %}
@@ -69,7 +69,7 @@
     </div>
     <script type="text/javascript" src="/js/service-worker.js"></script>
     <script type="text/javascript" src="/js/main.js"></script>
-    {% include "partials/services/keystone-login-scripts.njk" %}
+    {# {% include "partials/services/keystone-login-scripts.njk" %} #}
     {% if extra_js %}
       {% for item in extra_js %}
         <script type="text/javascript" src="{{item}}"></script>
