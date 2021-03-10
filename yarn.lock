@@ -2182,7 +2182,7 @@
   optionalDependencies:
     "fsevents" "^1.2.7"
 
-"chokidar@^3.3.0", "chokidar@^3.3.1":
+"chokidar@^3.3.0", "chokidar@^3.3.1", "chokidar@>=2.0.0 <4.0.0":
   "integrity" "sha512-aXAaho2VJtisB/1fg1+3nlLJqGOuewTzQpd/Tz0yTg2R0e4IGtshYvtjowyEumcBv2z+y4+kc75Mz7j5xJskcQ=="
   "resolved" "https://registry.npmjs.org/chokidar/-/chokidar-3.4.0.tgz"
   "version" "3.4.0"
@@ -3865,6 +3865,13 @@
   "version" "1.2.2"
   dependencies:
     "delegate" "^3.1.2"
+
+"gorko@^0.2.3":
+  "integrity" "sha512-8U/F4GH+S5n5HnLP9nCYzKwiSvvWv9PEusIwGYe+V+/wMohnF1Byyk2y1lo53MTtTYEVlHMP8+hu3C0PnBnaJQ=="
+  "resolved" "https://registry.npmjs.org/gorko/-/gorko-0.2.3.tgz"
+  "version" "0.2.3"
+  dependencies:
+    "sass" "^1.26.5"
 
 "got@^9.6.0":
   "integrity" "sha512-R7eWptXuGYxwijs0eV+v3o6+XH1IqVK8dJOEecQfTmkncw9AV4dcw/Dhxi8MdlqPthxxpZyizMzyg8RTmEsG+Q=="
@@ -7080,6 +7087,13 @@
     "lodash" "^4.0.0"
     "scss-tokenizer" "^0.2.3"
     "yargs" "^7.0.0"
+
+"sass@^1.26.5":
+  "integrity" "sha512-Sl6mIeGpzjIUZqvKnKETfMf0iDAswD9TNlv13A7aAF3XZlRPMq4VvJWBC2N2DXbp94MQVdNSFG6LfF/iOXrPHQ=="
+  "resolved" "https://registry.npmjs.org/sass/-/sass-1.32.8.tgz"
+  "version" "1.32.8"
+  dependencies:
+    "chokidar" ">=2.0.0 <4.0.0"
 
 "sax@~1.2.4":
   "integrity" "sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw=="

@@ -5,7 +5,7 @@ const { compileSassTargets } = require("../utils/compile-scss");
 
 // Add SCSS compilation targets here
 const targets = {
-  main: "site/src/scss/main.scss"
+  critical: "site/src/scss/critical.scss"
 };
 
 // Create an object with the compiled CSS for each key in targets
