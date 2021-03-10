@@ -1,5 +1,25 @@
 const rssPlugin = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const Image = require("@11ty/eleventy-img");
+
+async function imageShortcode(src, alt, sizes) {
+  let metadata = await Image(src, {
+    widths: [300, 600],
+    formats: ["avif", "jpeg"],
+    urlPath: "/images/",
+    outputDir: "./dist/images/",
+  });
+
+  let imageAttributes = {
+    alt,
+    sizes,
+    loading: "lazy",
+    decoding: "async",
+  };
+
+  // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
+  return Image.generateHTML(metadata, imageAttributes);
+}
 
 // Import filters
 const dateFilter = require("./site/filters/date-filter.js");
@@ -46,12 +66,12 @@ module.exports = function(config) {
       .slice(0, site.postsPerPage);
   });
 
-  // Passthrough
-  config.addPassthroughCopy({ "site/static": "/" });
-
   // Plugins
   config.addPlugin(rssPlugin);
   config.addPlugin(syntaxHighlight);
+
+  config.addNunjucksAsyncShortcode("image", imageShortcode);
+  config.addJavaScriptFunction("image", imageShortcode);
 
   // Watch for changes to my source files
   if (config.addWatchTarget) {
